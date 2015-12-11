@@ -35,5 +35,5 @@ IBM Bluemix was used to deploy the web application and Bluemix MongoDB service a
 
 
 However, due to the experimental nature of the MongoDB service of bluemix, the appliction is subject to crash under circumstances that
-we can't control. For that reason we also have provided the code for the website that we deployed on localhost.
+we can't control and such behaviour is expected for this release. We plan on migrating the database to cloudant in the future to solve this issue.
 
