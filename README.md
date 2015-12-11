@@ -26,7 +26,7 @@ Features:
           
           8. Admin has the ability to approve posts made by the users before they can be seen publically
           
-          9. The website is resistant to SQL injection. It also has session based access and encrypted session based cookies maknig 
+          9. The website is resistant to SQL injection. It also has session based access and encrypted session based cookies making 
             the website highly secure against a variety of attacks like MIM and session hacking.
             
 
