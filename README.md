@@ -1,4 +1,11 @@
 # CMPE_272_Team14
+Team Number 14
+
+Contributors:
+1. Mohammad Awaise 
+2. Shounak Gujarathi
+3. Kartik Patil 
+4. Varun Goyal 
 
 Infralift: Crowdsourcing ideas, fixing old infrastructure.
 
