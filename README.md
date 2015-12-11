@@ -8,8 +8,10 @@ thus, beautifying the community and making it safer.
 The website can be found here:
 http://logininfra.mybluemix.net/
 
-Features: 1. Login, register user page.
+Features: 
 
+          1. Login, register user page.
+          
           2. Forgot Password functionality with email and random password generation
           
           3. View posts by others
