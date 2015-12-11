@@ -1,0 +1,66 @@
+.custom{
+    background: url("../design/transparent.png");
+}
+
+.btn-file {
+    position: relative;
+    background-color:#1a1a1a !important;
+    overflow: hidden;
+    color:white !important;
+}
+.btn-file input[type=file],input[type=submit] {
+	margin-top:30px;
+	color:white !important;
+	background-color: black !important;
+    font-size: 10px;
+    outline: none;
+    width:35%;
+}
+
+textarea:required {
+background: none !important;
+box-shadow: 0 0 5px red;
+-webkit-box-shadow: 0 0 5px red !important;
+-moz-box-shadow: 0 0 5px red !important;
+border: solid 0px transparent !important; // or border: none;
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+	-webkit-appearance: none !important;
+	width:300px;
+    font-family: 'Oswald', sans-serif;
+    padding: 0.8em 0.8em 0.8em 0.8em;
+    color: #727f90;
+    font-size: 14px;
+    outline: none !important;
+    background: #ffffff;
+    font-weight: 100;
+    border-radius: 4px;
+    border:2px outset !important;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-box-shadow: inset 2px 2px 3px 0 #D4D9E0;
+    -webkit-box-shadow: 2px 2px 3px 0 #D4D9E0;
+    box-shadow: inset 2px 2px 3px 0 #D4D9E0 !important;
+    resize  : none;
+}
+
+/* Gradient color1 - color2 - color1 */
+
+.style-one {
+    border: 0 !important; 
+    height: 1px !important; 
+    background: #333 !important;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc) !important;
+}
+
+.row-margin{
+	margin: 12px 0 0 0;	
+}
+
+.submit-bottom{
+	margin-top:50px !important;
+	width:25%;
+	margin:0 auto;
+	left:25%;		
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/> 
+   <title>Admin Page</title> 
+   <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+  </head>
+  <body>     
+       
+    <div class="panel-group" id="playlists" data-pdsa-collapser-name="playlists" data-pdsa-collapser-open="glyphicon glyphicon-plus" data-pdsa-collapser-close="glyphicon glyphicon-minus">
+              
+
+    <div id="visualization" style="width: 600px; height: 400px;"></div>
+        <script type="text/javascript">
+        
+            //load package
+
+            function drawVisualization() {
+                // Create and populate the data table.
+                var data = google.visualization.arrayToDataTable([
+                    [{label: 'Zip', type: 'string'},
+		           {label: 'Structures', type: 'number'}],
+		           <% for(var i in resdata) 
+			            {                     
+		            %>
+		           ['<%=resdata[i].ZIPCODE%>', <%=resdata[i].Count%>],
+		           <% 
+			            }  
+			       %>
+		        ]);
+        
+        
+        var data3 = google.visualization.arrayToDataTable([
+        ['Date', 'No. of Requests'],
+        <% for(var i in resdata2) 
+	            {                     
+            %>
+        ["<%=resdata2[i].DATE_UPLOADED%>",<%=resdata2[i].DATECount%>],
+        <% 
+	            }  
+	       %>
+      ]);
+
+      var options = {
+        chart: {
+          title: 'Daywise Requests'
+        },
+        hAxis: {
+          title: 'Day-wise Requests',
+          minValue: 0,
+        },
+        vAxis: {
+          title: 'Date'
+        },
+        bars: 'horizontal',
+        axes: {
+          y: {
+            0: {side: 'right'}
+          }
+        }
+      };
+      
+      
+      
+      var data2 = google.visualization.arrayToDataTable([
+        ['Date', 'No. of Requests'],
+        <% for(var i in resdata3) 
+	            {                     
+            %>
+        ["<%=resdata3[i].STATE%>",<%=resdata3[i].StateCount%>],
+        <% 
+	            }  
+	       %>
+      ]);
+
+      var options2 = {
+        chart: {
+          title: 'State wise Requests'
+        },
+        hAxis: {
+          title: 'State-wise Requests',
+          minValue: 0,
+        },
+        vAxis: {
+          title: 'Date'
+        },
+        bars: 'horizontal',
+        axes: {
+          y: {
+            0: {side: 'right'}
+          }
+        }
+        };   
+ 
+                // Create and draw the visualization.
+                new google.visualization.PieChart(document.getElementById('visualization')).draw(data, {title:"Zip Code wise classificaton of requests"});
+                
+      			
+      			
+                  
+                  
+                  var chart1 = new google.charts.Bar(document.getElementById('chart_div'));
+					google.visualization.events.addOneTimeListener(chart1, 'ready', function(){
+     					new google.charts.Bar(document.getElementById('chart_div2')).draw(data2, options2);   
+					});
+				chart1.draw(data3, options); 
+      
+    }
+    google.setOnLoadCallback(function(){
+    	drawVisualization();
+    });
+    google.load('visualization', '1', {packages: ['corechart', 'bar']});
+        </script>
+  </div>
+  
+  <div class="panel-group" id="playlists2" data-pdsa-collapser-name="playlists" data-pdsa-collapser-open="glyphicon glyphicon-plus" data-pdsa-collapser-close="glyphicon glyphicon-minus">
+    <div id="chart_div" style="width: 600px; height: 400px;"></div>
+    <script type="text/javascript">
+     
+      </script>
+  </div>
+  
+  <br><br>
+  
+  <div class="panel-group" id="playlists3" data-pdsa-collapser-name="playlists" data-pdsa-collapser-open="glyphicon glyphicon-plus" data-pdsa-collapser-close="glyphicon glyphicon-minus">
+    <div id="chart_div2" style="width: 600px; height: 400px;"></div>
+    <script type="text/javascript">
+    
+     
+      </script>
+  </div>
+</body> 
+</html>

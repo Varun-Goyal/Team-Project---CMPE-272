@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>	
+<head>
+<title>Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Hooks Login Form Responsive Templates, Iphone Widget Template, Smartphone login forms,Login form, Widget Template, Responsive Templates, a Ipad 404 Templates, Flat Responsive Templates" />
+
+<!--scripts-->
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="/js/jquery.min.js"></script>
+<!--//scripts->
+
+
+<!--stylesheets-->
+<link href="/css/Signup.css" rel='stylesheet' type='text/css' />
+<!--//stylesheets-->
+
+
+
+<!--webfonts-->
+<link href='//fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+<!--//webfonts-->
+
+
+</head>
+<body>
+<script>$(document).ready(function(c) {
+	$('.close').on('click', function(c){
+		$('.login-form').fadeOut('slow', function(c){	  		
+		 	window.location.href="/";
+		});
+	});	  
+});
+
+
+</script>
+ <!--SIGN UP-->
+<div class="login-form">
+	<div class="close"> </div>
+		<img src="/images/InfraLiftLogo.png"/>
+		<h1>User Signup</h1>
+			<form method="POST" action="/afterSignUp">
+				
+				
+				<input type="text" class="First Name" placeholder="First Name" name="inputFname" required/>
+				<input type="text" class="email" placeholder="Last Name" name="inputLname" required/>
+				
+				<input type="email" class="email" placeholder="Email Address" name="inputEmail" required/>
+				<input type="password" class="password" placeholder="Password" name="inputPassword" required/>
+				
+				<div class="radioRow">
+				<label for="dob" class="lbl">Date Of Birth</label>
+				<input type="date" class="date" placeholder="Date Of Birth" name="inputDOB" required/>
+				</div>	
+				                
+				<div class="radioRow">
+				<label class="lbl" for="inputGender">Enter your Gender</label>		                   
+              	<input type="radio" class="radio" name="inputGender" value="Male" id="inputMale" required><p class="radioP"> Male </p>
+             	<input type="radio" class="radio" name="inputGender" value="Female" id="inputFemale" required><p class="radioP"> Female</p>
+				</div>	
+				 
+				 <input type="text" class="email" placeholder="State" name="inputState" required/>
+				 <input type="text" class="email" placeholder="Country" name="inputCountry" required/>
+				 <input type="number" class="email" placeholder="Zipcode" name="inputZip" required/>                  
+					
+							<input type="submit" class="formEnd" value="Sign up">
+			</form>
+</div>
+</body>
+</html>

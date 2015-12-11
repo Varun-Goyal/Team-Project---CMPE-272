@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- Free web templates by http://www.templatesdock.com; released for free under a Creative Commons Attribution 3.0 License -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-language" content="en" />
+	<meta name="description" content="[HERE PASTE YOUR DESCRIPTION]" />
+	<meta name="author" content="Template:TemplatesDock [www.templatesdock.com]; e-mail:hello@templatesdock.com" />
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/skin.css" />
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/custom_post.css" /><!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/comments_style.css">
+	<script type="text/javascript" src="javascript/jquery.js"></script>	
+	<script type="text/javascript" src="javascript/jquery.loopedslider.js"></script>	
+	<script type="text/javascript" src="javascript/cufon-yui.js"></script>
+	<script type="text/javascript" src="javascript/font.font.js"></script>
+	<script type="text/javascript">Cufon.replace('.cufon, .nav, .slogan', {hover:true});</script>
+	
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script type="text/javascript" src="/controllers/userposts.js"></script>    		
+	<!--[if IE 6]><script src="javascript/pngfix.js"></script><script>DD_belatedPNG.fix('.logo img, .nav a, .section');</script><![endif]--> 	
+	<title>InfraLift</title>
+	
+	<link rel="stylesheet" href="css/reset.css">
+
+    <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Lato:300,400,700'>
+	<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+
+     <link rel="stylesheet" href="css/upvotestyle.css">
+
+
+<%if (typeof result != 'undefined'){%>
+ 	<%if (result == 'success'){%>
+  			<script>
+  			$( document ).ready(function() {
+    			$("#posthidden").removeClass("hidden");
+			});
+			</script>
+ 	<%}%>
+ 	<%if (result == '2'){%>
+ 			<script>
+  			$( document ).ready(function() {
+    			$("#signedup").removeClass("hidden");
+			});
+			</script>
+ 	<%}%>
+ 	<%if (result == '3'){%>
+ 			<script>
+  			$( document ).ready(function() {
+    			$("#invalid").removeClass("hidden");
+			});
+			</script>
+ 	<%}%>
+<%}%>
+	
+	
+</head>
+
+<body ng-app="userposts" ng-controller="userpostsController">
+
+<div class="bg">
+
+<div class="main">
+
+	<!-- HEADER -->
+	<div class="header box custom">
+
+		<p class="logo" style="top:0px;"><a href="./" title="CompanyName [Go to homepage]"><img src="design/TransparentLogo2.png" style="width:180px;height:130px;" alt="" /></a></p>
+		
+		<!-- NAVIGATION -->
+		<ul class="nav box">
+			<li class="current"><a href="/">Home</a></li>
+			<li><a href="/makepost">Post</a></li>
+			<li><a href="/logout">Logout</a></li>
+		</ul>
+
+	</div> <!-- /header -->
+	
+	<!-- SLOGAN -->
+	<div class="slogan custom">
+		<br><br>
+		<h2>Issues submitted by 
+		other users</h2>
+		
+	</div> <!-- /slogan -->
+
+	<!-- SECTION -->
+	<div class="section box" style="margin-top:0px; box-shadow: 2px 5px 5px #888888;">
+
+		
+		<!-- CONTENT -->
+		<div class="content box" >
+		   <h4 class="message hidden" id="posthidden" style="margin-top:75px;">Your post has been uploaded and will be visible here once it has been approved by the admin</h4><br/>
+			
+			<!-- HEADINGS -->
+			
+			<div ng-repeat="Post in Posts">
+			<!-- Repeat -->
+			<hr class="style-one"><br/>
+			<div class="box" style="margin-top:20px; box-shadow: 10px 10px 5px #888888;">
+				<div class="container">
+					
+					<!--Image-->
+					<div class="row">
+						<div class="col-md-8">							
+							<b>Infrastructure:</b> {{Post.NAME}}<br/>
+							<b>Description:</b> {{Post.DESCRIPTION}}<br/><br/>
+							<div class="row" style=" padding-left:5%;">
+								<img id="blah" ng-src="{{Post.IMAGEFILE}}" alt="" class="f-left" style="width:700px; height:400px; border:1px solid;"/>
+							</div>
+							<br/><span width:700px;>@ {{Post.ADDRESS}},{{Post.STATE}} - {{Post.ZIPCODE}},{{Post.COUNTRY}}</span>
+							<div class="wrap">
+  								<div class="votes" style="color:white !important; border-color:black !important; background-color:black !important;">{{Post.upvotes.count}}</div>
+  								<div class="button" ng-click="upvote($index);" style="color:white !important; border-color:black !important; background-color:grey !important;"><i class="fa fa-arrow-up"></i>Vote this up now</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+								<div class="comment_block">
+						
+									<!-- used by #{user} to create a new comment -->
+									 <div class="create_new_comment">
+							
+										<!-- current #{user} avatar -->
+									 	<div class="user_avatar">
+									 		<img ng-src="http://img2.wikia.nocookie.net/__cb20130607025329/creepypasta/images/3/38/Avatar-blank.jpg">
+									 	</div><!-- the input field --><div class="input_comment">
+									 	
+											<div class="input-group">
+									 			<input type="text" ng-model="Post.AddComment" name="txt_comment" placeholder="Join the conversation.." aria-describedby="basic-addon2">
+									 			<span class="input-group-addon black-addon" ng-click="postcomment($index,Post.AddComment);">Post comment</span>
+											</div>
+									 	</div>
+							
+									 </div>
+									<!-- used by #{user} to create a new comment -->
+						
+								 <!-- Ng-epeat for comments-->
+								 <div class="new_comment" ng-repeat="comment in Post.COMMENTS">
+						
+									<!-- build comment -->
+								 	<ul class="user_comment">
+										<li>
+								 		<!-- current #{user} avatar -->
+									 	<div class="user_avatar">
+									 		<img src="http://img2.wikia.nocookie.net/__cb20130607025329/creepypasta/images/3/38/Avatar-blank.jpg">
+									 	</div><!-- the comment body --><div class="comment_body">
+									 		<p>{{comment.TEXT}}</p>
+									 	</div>
+						
+									 	<!-- comments toolbar -->
+									 	<div class="comment_toolbar">
+						
+									 		<!-- inc. date and time -->
+									 		<div class="comment_details">
+									 			<ul>
+									 				<li><i class="fa fa-clock-o"></i> 13:94</li>
+									 				<li><i class="fa fa-calendar"></i> 04/01/2015</li>
+									 				<li><i class="fa fa-pencil"></i> <span class="user">{{comment.FNAME}}&nbsp;	{{comment.LNAME}}</span></li>
+									 			</ul>
+									 		</div>
+						
+									 	</div>
+									</li>
+									</ul>
+						
+								 </div>
+								 <!-- Ng-epeat for comments-->
+								 
+						   </div>
+						
+						
+					</div>
+					<!--Image-->
+					
+					
+					
+				</div>
+			</div>
+			<br><br>			
+			<!-- Repeat -->
+			</div>
+			
+			
+		
+			
+	   
+		</div> <!-- /content -->
+
+	</div> <!-- /section -->		
+
+	<!-- FOOTER -->
+	<div class="footer box">
+
+		<p class="f-right t-right">
+			InfraLift Inc.<br />
+			<a href="#">www.InfraLift.com</a><br />
+			<a href="#">InfraLift@gmail.com</a><br />
+			Address: San Jose<br />
+			Phone: (###) ###-####
+		</p>
+	
+		<p class="f-left">
+			Copyright &copy;&nbsp;2015 <a href="/">InfraLift Inc</a><br />
+		</p>
+
+	</div> <!-- /footer -->
+
+</div> <!-- /main -->
+
+</div> <!-- /bg -->
+
+<script type="text/javascript"> Cufon.now(); </script>
+
+</body>
+</html>

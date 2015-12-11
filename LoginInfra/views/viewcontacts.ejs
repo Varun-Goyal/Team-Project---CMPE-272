@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-language" content="en" />
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/skin.css" />
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/addcontact.css" /><!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/comments_style.css">
+	<script type="text/javascript" src="javascript/jquery.js"></script>	
+	<script type="text/javascript" src="javascript/jquery.loopedslider.js"></script>	
+	<script type="text/javascript" src="javascript/cufon-yui.js"></script>
+	<script type="text/javascript" src="javascript/font.font.js"></script>
+	<script type="text/javascript">Cufon.replace('.cufon, .nav, .slogan', {hover:true});</script>
+	
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script type="text/javascript" src="/controllers/admincontacts.js"></script>    		
+	<!--[if IE 6]><script src="javascript/pngfix.js"></script><script>DD_belatedPNG.fix('.logo img, .nav a, .section');</script><![endif]--> 	
+	<title>InfraLift</title>
+	
+	
+</head>
+
+<body>
+
+<div class="bg" ng-app="contacts" ng-controller="contactsController">
+
+<div class="main">
+
+	<!-- HEADER -->
+	<div class="header box custom">
+
+		<p class="logo" style="top:0px;"><a href="/"><img src="design/TransparentLogo2.png" style="width:250px;height:160px;" alt="" /></a></p>
+		
+		<!-- NAVIGATION -->
+		<ul class="nav box">
+			<li class="current"><a href="/">Home</a></li>
+			<li><a href="/addcontacts">Add Contacts</a></li>
+			<li><a href="/viewcontacts">View Contacts</a></li>
+			<li><a href="/analytics">View Analytics</a></li>
+			<li><a href="/logout">Logout</a></li>
+		</ul>
+
+	</div> <!-- /header -->
+	
+	<!-- SLOGAN -->
+	<div class="slogan custom">
+		<br><br>
+		<h2>Add contact details for
+		reporting issues</h2>
+		
+	</div> <!-- /slogan -->
+
+	<!-- SECTION -->
+	<div class="section box" style="margin-top:0px; box-shadow: 2px 5px 5px #888888;">
+
+		
+		<!-- CONTENT -->
+		<div class="content box" >
+			
+			<!-- HEADINGS -->
+			
+			<div>
+			<hr class="style-one"><br/>
+			<div class="box" style="margin:20px auto; box-shadow: 10px 10px 5px #888888; width:800px !important;">
+				<div class="container" style="width:800px !important;">
+					
+					<div class="row">
+						<div>							
+							<div style="margin:0 auto;">
+								<div align="center" style="padding-left:0px;">
+									<table class="table">
+									    <thead>
+									      <tr>
+									        <th>Email</th>
+									        <th>Zip</th>
+									        <th>State</th>
+									        <th>Country</th>
+									      </tr>
+									    </thead>
+									    <tbody>
+									      <tr ng-repeat="contact in contacts">
+									      	<td>{{contact.ID}}</td>
+									        <td>{{contact.ZIPCODE}}</td>
+									        <td>{{contact.STATE}}</td>
+									        <td>{{contact.COUNTRY}}</td>
+									      </tr>
+									    </tbody>
+								    </table>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					
+					
+				</div>
+			</div>
+			<br><br>			
+			<!-- Repeat -->
+			</div>
+			
+			
+		
+			
+	   
+		</div> <!-- /content -->
+
+	</div> <!-- /section -->		
+
+	<!-- FOOTER -->
+	<div class="footer box">
+
+		<p class="f-right t-right">
+			InfraLift Inc.<br />
+			<a href="#">www.InfraLift.com</a><br />
+			<a href="#">InfraLift@gmail.com</a><br />
+			Address: San Jose<br />
+			Phone: (###) ###-####
+		</p>
+	
+		<p class="f-left">
+			Copyright &copy;&nbsp;2015 <a href="/">InfraLift Inc</a><br />
+		</p>
+
+	</div> <!-- /footer -->
+
+</div> <!-- /main -->
+
+</div> <!-- /bg -->
+
+<script type="text/javascript"> Cufon.now(); </script>
+
+</body>
+</html>

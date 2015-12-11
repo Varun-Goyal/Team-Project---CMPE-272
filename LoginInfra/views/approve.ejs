@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- Free web templates by http://www.templatesdock.com; released for free under a Creative Commons Attribution 3.0 License -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-language" content="en" />
+	<meta name="description" content="[HERE PASTE YOUR DESCRIPTION]" />
+	<meta name="author" content="Template:TemplatesDock [www.templatesdock.com]; e-mail:hello@templatesdock.com" />
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/skin.css" />
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/custom.css" /><!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/comments_style.css">
+	<script type="text/javascript" src="javascript/jquery.js"></script>	
+	<script type="text/javascript" src="javascript/jquery.loopedslider.js"></script>	
+	<script type="text/javascript" src="javascript/cufon-yui.js"></script>
+	<script type="text/javascript" src="javascript/font.font.js"></script>
+	<script type="text/javascript">Cufon.replace('.cufon, .nav, .slogan', {hover:true});</script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script type="text/javascript" src="/controllers/adminposts.js"></script>    	
+	<!--[if IE 6]><script src="javascript/pngfix.js"></script><script>DD_belatedPNG.fix('.logo img, .nav a, .section');</script><![endif]--> 	
+	<title>InfraLift</title>
+	
+	
+</head>
+
+<body ng-app="adminposts" ng-controller="adminpostsController">
+
+<div class="bg">
+
+<div class="main">
+
+	<!-- HEADER -->
+	<div class="header box custom">
+
+		<p class="logo" style="top:0px;"><a href="/"><img src="design/TransparentLogo2.png" style="width:180px;height:130px;" alt="" /></a></p>
+		
+		<!-- NAVIGATION -->
+		<ul class="nav box">
+			<li class="current"><a href="/">Home</a></li>
+			<li><a href="/addcontacts">Add Contacts</a></li>
+			<li><a href="/viewcontacts">View Contacts</a></li>
+			<li><a href="/analytics">View Analytics</a></li>
+			<li><a href="/logout">Logout</a></li>
+		</ul>
+
+	</div> <!-- /header -->
+	
+	<!-- SLOGAN -->
+	<div class="slogan custom">
+		<br><br>
+		<h2>Approve issues submitted by 
+		users</h2>
+		
+	</div> <!-- /slogan -->
+
+	<!-- SECTION -->
+	<div class="section box" style="margin-top:0px; box-shadow: 2px 5px 5px #888888;">
+
+		
+		<!-- CONTENT -->
+		<div class="content box" >
+		   <h2 style="margin-top:75px;">Issues reported</h2>
+			
+			<!-- HEADINGS -->
+			
+			<div ng-repeat="Post in approvePosts">
+				<!-- Repeat -->
+				<hr class="style-one"><br/>
+				<div class="box" style="margin-top:20px; box-shadow: 10px 10px 5px #888888;">
+					<div class="container">
+						
+						<!--Image-->
+						<div class="row">
+							<div class="col-md-8">	
+								<div class="row" style=" padding-left:16%;">						
+									<b>Infrastructure:</b> {{Post.NAME}}<br/>
+									<b>Description:</b> {{Post.DESCRIPTION}}<br/><br/>
+								</div>
+								<div class="row" style=" padding-left:16%;">
+									<img id="blah" ng-src={{Post.IMAGEFILE}} alt="" class="f-left" style="width:600px; height:350px; border:1px solid;"/>
+								</div>
+								<div class="row" style=" padding-left:16%;">	
+									<br/><span width:700px;>@ {{Post.ADDRESS}},{{Post.STATE}} - {{Post.ZIPCODE}},{{Post.COUNTRY}}</span>
+								</div>
+							</div>
+						</div>
+						<div class="row" style="padding-left:10.5%;padding-bottom:50px;">
+							<br>
+							<button ng-click="approve($index)" class="btn btn-primary btn-file" style="padding:10px 70px;">Approve</button>
+							
+						</div>
+						<!--Image-->
+						
+						
+						
+					</div>
+				</div>
+				<br><br>			
+				<!-- Repeat -->
+			</div>
+	   
+		</div> <!-- /content -->
+
+	</div> <!-- /section -->		
+
+	<!-- FOOTER -->
+	<div class="footer box">
+
+		<p class="f-right t-right">
+			InfraLift Inc.<br />
+			<a href="#">www.InfraLift.com</a><br />
+			<a href="#">InfraLift@gmail.com</a><br />
+			Address: San Jose<br />
+			Phone: (###) ###-####
+		</p>
+	
+		<p class="f-left">
+			Copyright &copy;&nbsp;2015 <a href="/">InfraLift Inc</a><br />
+		</p>
+
+	</div> <!-- /footer -->
+
+</div> <!-- /main -->
+
+</div> <!-- /bg -->
+
+<script type="text/javascript"> Cufon.now(); </script>
+
+</body>
+</html>

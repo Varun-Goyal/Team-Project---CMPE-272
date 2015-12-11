@@ -1,0 +1,25 @@
+.custom{
+    background: url("../design/transparent.png");
+}
+
+.btn-file {
+    position: relative;
+    background-color:#1a1a1a !important;
+    overflow: hidden;
+    color:white !important;
+}
+
+.row-margin{
+	margin: 12px 0 0 0;	
+}
+
+.submit-bottom{
+	margin-top:50px !important;
+	width:25%;
+	margin:0 auto;
+	left:25%;		
+}
+
+.login-bottom{
+	margin-bottom: 40px !important;
+}

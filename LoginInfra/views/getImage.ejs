@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Add Images</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <script src="http://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places"></script>
+    <script src="http://code.angularjs.org/1.3.15/angular.js"></script>
+    <!-- Custom CSS -->
+
+<script type="text/javascript">
+
+var app = angular.module('test', []);
+app.controller("testController", testController);
+testController.$inject = [ '$scope', '$http', '$window' ];
+function testController($scope, $http, $window) {
+	
+					$http({
+						method : 'Get',
+						url : '/Image?image=1234_MFNxnmhx81uUbxV1kqUVGM.JPG',
+						data : {
+						},
+						headers: {
+						   'Content-Type': 'image'
+						 },
+					}).success(function(response) {
+						if (response.result != "error") {							
+							console.log(response);
+						} else {
+							alert("Error");
+						}
+					}).error(function(error) {
+						console.log(error);
+					});
+	$scope.imgName = '1234_MFNxnmhx81uUbxV1kqUVGM.JPG';
+	
+}
+
+</script>
+
+
+</head>
+
+<body ng-app="test" ng-controller="testController">
+    <img ng-src="/Image?image={{imgName}}" width="800" height="800">
+</div>
+</body>
+</html>

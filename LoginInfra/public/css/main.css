@@ -1,0 +1,111 @@
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+RESET & HTML ELEMENTS
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+blockquote, body, button, code, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, img, legend, li, ol, p, pre, td, th, ul {margin:0; padding:0; border:0; vertical-align:baseline;}
+address, blockquote, dl, fieldset, form, h1, h2, h3, h4, h5, h6, ol, p, table, ul {margin:15px 0;}
+body {background:url("../design/bg2.png") 0 0 repeat-x !important; font:0.8em/1.5 "arial", sans-serif;}
+h1 {font-size:200%;}
+h2 {font-size:180%; font-weight:normal;}
+h3 {font-size:150%; font-weight:normal;}
+h4, h5, h6 {font-size:120%; font-weight:normal;}
+form ul {list-style:none;}
+form li {display:block; padding-bottom:7px;}
+form li label {display:block; padding-bottom:3px;}
+input, select, textarea {font-size:100%; font-family:"arial",sans-serif;}
+table.table {border-collapse:collapse; border-spacing:0;}
+table.table th, table.table td {padding:7px 10px;}
+table.table th {font-weight:bold;}
+ul.ul {margin-left:20px; list-style:none;}
+ul.ul li {padding-left:15px; background:url("../design/ul.gif") 0 5px no-repeat;}
+ul.ul ul {margin:0 0 0 20px; list-style:none;}
+img.f-left {margin-right:15px;}
+img.f-right {margin-left:15px;}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+LAYOUT
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.bg {height:300px; background:url("../design/bg-02.png") 50% 0 no-repeat;}
+.main {width:960px; margin:0 auto;}
+.header {position:relative; height:130px !important;}
+.header .logo {position:absolute; top:45px; left:20px; margin:0;}
+.header .logo img {display:block;}
+.header .nav {position:absolute; top:0; right:20px; margin:0; font-size:120%;}
+.header .nav li {display:block; float:left;}
+.header .nav li a {display:block; float:left; padding:55px 10px 10px 10px; text-decoration:none;}
+.header .nav li.current a {background:url("../design/transparent.png");}
+.section {padding:0 40px;background-color:white; padding-bottom:150px;}
+.section .content {float:left; width:805px; text-align:justify;}
+.section .aside {float:right; width:250px;}
+.slogan {height:120px; overflow:hidden; text-align:center;}
+.slogan h2 {margin:0; font-size:235%; line-height:1.1;}
+.footer {padding:20px 0 50px 0;}
+.footer p {margin:0;}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+PAGE: HOMEPAGE
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+#hp .content {padding:0 20px 40px 20px; text-align:justify;}
+.slider {position:relative; width:920px; height:410px; padding:0 20px; background:url("../design/slider.png") 0 0 no-repeat;}
+.slider-container {position:relative; width:920px; height:390px; overflow:hidden;}
+.slider-slides {position:absolute; top:0; left:0;}
+.slider-slides div {position:absolute; top:0; width:920px; display:none;}
+.slider-slides div div {position:relative; display:block; height:390px; overflow:hidden;}
+.slider-slides div div .desc {position:absolute; bottom:75px; left:40px; margin:0; font-size:110%; line-height:1.4; font-weight:bold;}
+.slider-slides div div .desc a {font-size:85%; font-weight:normal;}
+.slider-slides div div .preview {position:absolute; top:40px; right:40px;}
+.slider-pagination {position:absolute; bottom:0; right:20px;}
+.slider-pagination li {display:inline;}
+.slider-pagination li a {display:block; float:left; width:10px; height:10px; overflow:hidden; margin-left:4px; background:url("../design/slider-pagination.png") 0 -10px no-repeat;}
+.slider-pagination li.active a {background-position:0 0;}
+.slider-pagination li span {display:none;}
+.cols3 {margin:0; list-style:none;}
+.cols3 li {display:block; float:left; width:290px; margin-right:25px;}
+.cols3 li.last {margin:0;}
+.cols3 li h2 {margin:0;}
+.cols3 li .thumb {margin:10px 0;}
+.cols3 li .thumb img {display:block; width:290px;}
+.more {text-align:right; line-height:34px;}
+.more a {border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; padding:7px 12px; text-decoration:none; font-weight:bold;}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+PAGE: SUBPAGE
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.main-title {margin:0; padding:20px 0 25px 0;}
+.gallery li {display:block; float:left; margin-right:10px;}
+.gallery li.last {margin:0;}
+.menu {list-style:none;}
+.menu li {display:inline;}
+.menu li a {display:block; padding:5px 0;}
+.menu li.current a {font-weight:bold; text-decoration:none;}
+.sponsors {margin:0; list-style:none; font-size:85%;}
+.sponsors li {padding:10px 0;}
+.sponsors li a {font-size:115%;}	
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+OTHERS
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.box {min-height:1px; _height:1%;}
+.box:after {display:block; visibility:hidden; clear:both; line-height:0; font-size:0; content:".";}
+.fix {float:none; clear:both; width:0; height:0; margin:0; padding:0; border:0; line-height:0; font-size:0;}
+.f-left {float:left !important;}
+.f-right {float:right !important;}
+.t-left {text-align:left !important;}
+.t-center {text-align:center !important;}
+.t-right {text-align:right !important;}
+.t-justify {text-align:justify !important;}
+.va-top {vertical-align:top !important;}
+.va-middle {vertical-align:middle !important;}
+.va-bottom {vertical-align:bottom !important;}
+.nom {margin:0 !important;}
+.nomt {margin-top:0 !important;}
+.nomb {margin-bottom:0 !important;}
+.hidden {position:absolute; left:-1000em; top:auto; width:1px; height:1px; overflow:hidden;}
+.noscreen {display:none;}
+.smaller {font-size:85%;}
+.input-text {padding:5px;}
+.input-submit {padding:3px;}

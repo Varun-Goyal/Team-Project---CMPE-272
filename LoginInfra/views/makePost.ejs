@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- Free web templates by http://www.templatesdock.com; released for free under a Creative Commons Attribution 3.0 License -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-language" content="en" />
+	<meta name="description" content="[HERE PASTE YOUR DESCRIPTION]" />
+	<meta name="author" content="Template:TemplatesDock [www.templatesdock.com]; e-mail:hello@templatesdock.com" />
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/skin.css" />
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/custom.css" /><!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script type="text/javascript" src="javascript/jquery.js"></script>	
+	<script type="text/javascript" src="javascript/jquery.loopedslider.js"></script>	
+	<script type="text/javascript" src="javascript/cufon-yui.js"></script>
+	<script type="text/javascript" src="javascript/font.font.js"></script>
+	<script type="text/javascript">Cufon.replace('.cufon, .nav, .slogan', {hover:true});</script>	
+	<!--[if IE 6]><script src="javascript/pngfix.js"></script><script>DD_belatedPNG.fix('.logo img, .nav a, .section');</script><![endif]--> 	
+	<title>InfraLift</title>
+	
+	<script>
+		function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result)
+                    .width(350)
+                    .height(300);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+		
+	</script>
+	
+</head>
+
+<body>
+
+<div class="bg">
+
+<div class="main">
+
+	<!-- HEADER -->
+	<div class="header box custom">
+
+		<p class="logo" style="top:0px;"><a href="./" title="CompanyName [Go to homepage]"><img src="design/TransparentLogo2.png" style="width:180px;height:130px;" alt="" /></a></p>
+		
+		<!-- NAVIGATION -->
+		<ul class="nav box">
+			<li class="current"><a href="/">Home</a></li>
+			<li><a href="/makepost">Post</a></li>
+			<li><a href="/logout">Logout</a></li>
+		</ul>
+
+	</div> <!-- /header -->
+	
+	<!-- SLOGAN -->
+	<div class="slogan custom">
+	
+		<h2>Submit issues related to infrastructure <br />
+		in your locality.</h2>
+		
+	</div> <!-- /slogan -->
+
+	<!-- SECTION -->
+	<div class="section box" style="margin-top:0px; box-shadow: 2px 5px 5px #888888;">
+
+		
+		<!-- CONTENT -->
+		<div class="content box" >
+		   <h2 style="margin-top:75px;">Report an issue in your locality</h2>
+			<hr class="style-one">
+			<!-- HEADINGS -->
+			
+			<div class="box" style="margin-top:20px;">
+				<div class="container">
+					<form id="form" method="post" name="uploadImage" action="/uploadpost" enctype="multipart/form-data">
+						<div class="row">	
+						<!-- IMAGE FLOATING -->
+						<div class="col-md-4">	
+							<div class="row" style="margin-top:70px;">
+								<img id="blah" src="design/Placeholder.png" alt="" class="f-left" style="width:350px; height:300px;"/>	
+							</div>
+							
+							<div class="row">
+								<br/>	
+								<span style="vertical-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please choose a file to upload</span> 
+								<span class="btn btn-default btn-file">
+		   							 Browse <input type="file" onchange="readURL(this);" name='file'>
+								</span>
+							</div>
+						</div>
+						<div class="col-md-5">	
+						<p>
+							
+							<div class="row row-margin" style="text-align: left !important;">		
+								<span style="text-align: left !important;">Name of Ailing Infrastructure</span>
+								<input type="text" name="txt_name" id="txt_name" size="30"/>
+							</div>
+							
+							<div class="row row-margin" style="text-align: left !important;">	
+								Description<br>
+								<textarea name="txt_description" id="txt_description" rows="4" cols="50"></textarea>
+							</div>
+							
+							<div class="row row-margin" style="text-align: left !important;">	
+								Address<br>
+								<input type="text" name="txt_address" id="txt_address" size="30"/>				
+							</div>
+							
+							<div class="row row-margin" style="text-align: left !important;">	
+								Zip Code<br>
+								<input type="text" name="txt_zip" id="txt_zip" size="30"/>
+							</div>
+							
+							<div class="row row-margin" style="text-align: left !important;">		
+								State<br>	
+								<input type="text" name="txt_state" id="txt_state" size="30"/>
+							</div>
+							
+						</p>
+						</div>
+						<!-- Photo: (c) Nic McPhee -->	
+						</div>
+						<div class="row">						
+							<span class="btn btn-default btn-file submit-bottom">
+		   							 Submit <input type="submit">
+							</span>
+						</div>
+					</form>
+					
+				</div>
+			</div>
+	   
+		</div> <!-- /content -->
+
+	</div> <!-- /section -->		
+
+	<!-- FOOTER -->
+	<div class="footer box">
+
+		<p class="f-right t-right">
+			InfraLift Inc.<br />
+			<a href="#">www.InfraLift.com</a><br />
+			<a href="#">InfraLift@gmail.com</a><br />
+			Address: San Jose<br />
+			Phone: (###) ###-####
+		</p>
+	
+		<p class="f-left">
+			Copyright &copy;&nbsp;2015 <a href="/">InfraLift Inc</a><br />
+		</p>
+
+	</div> <!-- /footer -->
+
+</div> <!-- /main -->
+
+</div> <!-- /bg -->
+
+<script type="text/javascript"> Cufon.now(); </script>
+
+</body>
+</html>
